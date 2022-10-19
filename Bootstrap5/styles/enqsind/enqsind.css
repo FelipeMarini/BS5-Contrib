@@ -1,14 +1,14 @@
+.header, .footer, .main { position: absolute; left: 0; width: 100%; }
+.header, .footer { overflow: hidden; height: 7rem; }
+
+
 :root {
     --vinho: rgb(175,25,28,0.8);
 }
 
-body{
-    max-width: 100%;
-    max-height: 100%;
-}
 
+/* início header */
 .header{
-    height: 7.5rem;
     background-color: var(--vinho);
 }
 
@@ -43,13 +43,12 @@ body{
 }
 /* fim header */
 
+
+/* início main */
 .main{
-    height: calc(100vh - 15rem);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 5rem;
+    top: 7rem; 
+    bottom: 7rem; 
+    overflow: auto;
 }
 
 .enq-info{
@@ -57,19 +56,25 @@ body{
     font-size: 1.375rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
-    margin-top: 3%;
+    margin-top: 4%;
+    padding-left: 4%;
+    padding-right: 4%;
 }
 
-.return-btn{
-    margin-top: 10%;
+
+.btn{
+    margin-top: 15%;
+    margin-bottom: 10%;
 }
+/* fim main */
 
 
 /* início footer */
 .footer{
-    height: 7.5rem;
+    height: 6.5rem;
     background-color: var(--vinho);
 }
+/* fim footer */
 
 
 @media screen and (min-width: 1700px) {
@@ -80,7 +85,8 @@ body{
 
 }
 
-@media screen and (max-width: 545px) {
+
+@media screen and (min-width: 360px) and (max-width: 545px) {
     
     .title-header{
         display: none;
@@ -100,13 +106,34 @@ body{
         justify-content: center;
     }
 
-    .enq-info{
-        padding-right: 7%;
-        padding-left: 7%;
+    .title-footer{
+        font-size: 1.2rem;
+    }
+
+}
+
+@media screen and (max-width: 360px) {
+    
+    .title-header{
+        display: none;
+    }
+
+    .box-header-img{
+        width: 100%;
+    }
+
+    .box-header-title{
+        width: 0%;
+    }
+
+    .header{
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .title-footer{
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
 }
