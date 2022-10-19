@@ -1,0 +1,253 @@
+.header, .footer, .main { position: absolute; left: 0; width: 100%; }
+.header, .footer { overflow: hidden; height: 6rem; }
+.main { top: 6rem; bottom: 6rem; overflow: auto; }
+
+
+:root {
+    --vinho: rgb(175,25,28,0.8);
+}
+
+
+/* início header */
+.header{
+    background-color: var(--vinho);
+}
+
+.logo{
+    max-width: 11.25rem;
+    max-height: 7.5rem;
+    padding-left: 1.5rem;
+}
+
+.box-header-img{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-header-title{
+    width: 75%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 9%;
+}
+
+.title-header, .title-footer{
+    color: white;
+    font-size: 1.375rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    text-align: center;
+}
+/* fim header */
+
+/* início main */
+.main{
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-right: 5%;
+    padding-left: 5%;
+}
+
+.boleto-info{
+    color: crimson;
+    font-size: 1.375rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin-top: 1%;
+}
+
+/* início tabela */
+.table-title{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 22px;
+    text-align: center;
+    font-weight: 600;
+    margin-top: 2%;
+}
+
+.tabela{
+    border: solid 1px var(--vinho);
+}
+/* fim tabela */
+
+.form-index{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3%;
+}
+
+.label-email{
+    margin-top: 5%;
+}
+
+.input-colab, .input-email{
+    margin-top: 2%;
+}
+
+.btn{
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+/* fim main */
+
+
+/* início footer */
+.footer{
+    background-color: var(--vinho);
+}
+/* fim footer */
+
+.list-group{
+    display: none;
+}
+
+
+/* revisar as media queries para melhor responsividade mobile nesta página */
+@media screen and (min-width: 1700px) {
+    
+    .box-header-title, .box-header-img{
+        padding-left: 5%;
+    }
+
+}
+
+@media screen and (min-width: 345px) and (max-width: 545px) {
+    
+    .title-header{
+        display: none;
+    }
+
+    .box-header-img{
+        width: 100%;
+    }
+
+    .box-header-title{
+        width: 0%;
+    }
+
+    .header{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .boleto-info{
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+
+    .label-colab, .label-email{
+        text-align: center;
+    }
+
+    .input-colab, .input-email{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .title-footer{
+        font-size: 1.2rem;
+    }
+
+}
+
+@media screen and (min-width: 288px) and (max-width: 345px) {
+
+    .title-header{
+        display: none;
+    }
+
+    .box-header-img{
+        width: 100%;
+    }
+
+    .box-header-title{
+        width: 0%;
+    }
+
+    .header{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .boleto-info{
+        font-size: 1.25rem;
+    }
+
+    .tabela{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .label-colab{
+        text-align: center;
+    }
+
+    .btn{
+        margin-top: 8%;
+    }
+
+    .title-footer{
+        font-size: 1.1rem;
+    }
+
+}
+
+@media screen and (max-width: 288px) {
+    
+    .title-header{
+        display: none;
+    }
+
+    .box-header-img{
+        width: 100%;
+    }
+
+    .box-header-title{
+        width: 0%;
+    }
+
+    .header{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .boleto-info{
+        font-size: 1rem;
+    }
+
+    .tabela{
+       display: none
+    }
+
+    .label-colab, .label-email{
+        text-align: center;
+        margin-top: 4%;
+    }
+
+    .btn{
+        margin-top: 12%;
+        margin-bottom: 10%;
+    }
+
+    .footer{
+        height: 5rem;
+    }
+
+    .title-footer{
+        font-size: 0.9rem;
+    }
+
+    .list-group{
+        display: block;
+    }
+
+}

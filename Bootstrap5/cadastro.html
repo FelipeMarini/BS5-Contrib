@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/cadastro/cadastro.css">
+</head>
+<body>
+
+    <div class="container-fluid fixed-top d-flex header">  
+      
+        <div class="box-header-img">
+          <a href="#">
+            <img class="img-fluid logo" src="./img/logo.png" alt="logo Sinditêxtil">
+          </a>
+        </div>
+        
+        <div class="box-header-title">
+          <p class="text-uppercase title-header">sinditêxtil sp - contribuição assistencial</p>
+        </div>
+      
+    </div>
+  
+        
+    <div class="container-fluid main">
+
+      <div class="container content-main">
+        
+        <p class="text-center cad-info">Não foi encontrado nenhum cadastro de sua empresa no sistema Sinditêxtil - SP. Insira seus dados para realizar o cadastro:</p>
+
+        
+        <form class="row g-3 form-cad" action="#" method="post">
+          
+          <!-- início do form da empresa -->
+          <p class="text-center cad-title">Empresa</p>
+          <div class="col-md-3">
+            <label for="cnpj" class="form-label">CNPJ:</label>
+            <input type="text" class="form-control" id="cnpj" name="cnpj" placeholder="CNPJ">
+          </div>
+          <div class="col-md-4">
+            <label for="rz" class="form-label">Razão Social:</label>
+            <input type="text" class="form-control" id="rz" name="rz" placeholder="Razão Social">
+          </div>
+          <div class="col-md-4">
+            <label for="nf" class="form-label">Nome Fantasia:</label>
+            <input type="text" class="form-control" id="nf" name="nf" placeholder="Nome Fantasia">
+          </div>
+          <div class="col-md-2">
+            <label for="cs" class="form-label">Capital Social:</label>
+            <input type="number" min="1" class="form-control" id="cs" name="cs" placeholder="Capital Social">
+          </div>
+          <div class="col-md-4">
+            <label for="nc" class="form-label">Número de Colaboradores:</label>
+            <input type="number" min="1" class="form-control" id="nc" name="nc" placeholder="Número de Colaboradores">
+          </div>
+          <!-- fim do form da empresa -->
+          
+          <!-- início do form endereço-->
+          <p class="text-center cad-title">Endereço Fiscal</p>
+          <div class="col-md-2">
+            <label for="cep" class="form-label">Cep:</label>
+            <input type="text" class="form-control" id="cep" name="cep" placeholder="CEP">
+          </div>
+          <div class="col-md-4">
+            <label for="end" class="form-label">Endereço Fiscal</label>
+            <input type="text" class="form-control" name="end" id="end" placeholder="Endereço">
+          </div>
+          <div class="col-md-4">
+            <label for="bairro" class="form-label">Bairro</label>
+            <input type="text" class="form-control" id="bairro" name="bairro" placeholder="Bairro">
+          </div>
+          <div class="col-md-2">
+            <label for="num" class="form-label">Número</label>
+            <input type="number" min="1" class="form-control" id="num" name="num" placeholder="Número">
+          </div>
+          <div class="col-md-2">
+            <label for="comp" class="form-label">Complemento</label>
+            <input type="text" class="form-control" id="comp" name="comp" placeholder="Complemento">
+          </div>
+          <div class="col-md-4">
+            <label for="city" class="form-label">Cidade</label>
+            <input type="text" class="form-control" id="city" name="city" placeholder="Cidade">
+          </div>
+          <div class="col-md-2">
+            <label for="estado" class="form-label">Estado</label>
+            <select id="estado" class="form-select" name="estado">
+              <option selected>Estado</option>
+              <option>...</option>
+            </select>
+          </div>
+          <!-- fim do form endereço -->
+
+          <!-- início do form do contato -->
+          <p class="text-center cad-title">Contato</p>
+          <div class="col-md-4">
+            <label for="nome" class="form-label">Nome</label>
+            <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome">
+          </div>
+          <div class="col-md-4">
+            <label for="sn" class="form-label">Sobrenome</label>
+            <input type="text" class="form-control" id="sn" name="sn" placeholder="Sobrenome">
+          </div>
+          <div class="col-md-4">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="exemplo@email.com">
+          </div>
+          <!-- fim do form do contato -->
+
+          <div class="d-grid gap-2 col-3 mx-auto">
+            <button class="btn btn-danger botao-cad" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Cadastrar</button>
+          </div>
+        
+        </form>
+      
+      </div>
+
+      <!-- modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="ModalLabel">Email inválido</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            Insira um endereço de Email válido
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Ok</button>
+            </div>
+        </div>
+        </div>
+    </div>
+    <!-- fim modal -->
+  
+  
+    
+    </div> 
+    
+    
+    <div class="container-fluid fixed-bottom d-flex align-items-center justify-content-center footer">
+      
+        <p class="text-center text-uppercase title-footer">sinditêxtil sp - contribuição assistencial</p>
+        
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
